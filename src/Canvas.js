@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {View, WebView, ViewStylePropTypes} from 'react-native';
+import {View, WebView, ViewStylePropTypes, Platform} from 'react-native';
 import {webviewTarget, webviewProperties, webviewMethods} from './webview-binders';
 import CanvasRenderingContext2D from './CanvasRenderingContext2D';
 export {default as Image} from './Image';
@@ -124,7 +124,7 @@ export default class Canvas extends Component {
         <WebView
           ref={this.handleRef}
           style={{width, height, backgroundColor: 'transparent'}}
-          source={require('./index.html')}
+          source={Platform.OS === "ios" ? require('./index.html') : { uri: 'file:///android_asset/canvas.html' }}
           onMessage={this.handleMessage}
           onLoad={this.handleLoad}
         />

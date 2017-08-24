@@ -3,10 +3,6 @@
   "version": "0.1.8",
   "main": "dist/Canvas.js",
   "scripts": {
-    "start": "babel src --out-dir dist --copy-files --watch --source-maps",
-    "build": "babel src --out-dir dist --copy-files",
-    "build-to-example": "babel src --out-dir examples/node_modules/react-native-canvas/dist --copy-files --watch --source-maps",
-    "prepare": "yarn build"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -17,6 +13,5 @@
     "eslint-config-fbjs-opensource": "^1.0.0",
     "prettier": "^1.5.3"
   },
-  "dependencies": {},
-  "repository": "https://github.com/iddan/react-native-canvas"
+  "dependencies": {}
 }
